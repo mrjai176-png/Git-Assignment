@@ -7,7 +7,7 @@ on:
 
 jobs:
   node:
-    runs_on: ["wsl-ubuntu-jai"]
+    runs-on: ["wsl-ubuntu-jai"]
 
     steps:
      - name: clone the code
