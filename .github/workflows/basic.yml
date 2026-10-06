@@ -6,7 +6,7 @@ on:
 
 jobs:
   basic:
-    runs-on: "ubuntu-26.04"
+    runs-on: ["wsl-ubuntu-jai"]
     steps:
       - name : Basic GHA Pipeline
         run : echo "My First GHA Pipeline"
