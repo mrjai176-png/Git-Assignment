@@ -1,0 +1,25 @@
+name: Sonarqube Run
+
+on:
+  pull_request:
+    branch: ["main]
+
+jobs:
+  sonar:
+    runs-on: ["wsl-ubuntu-jai"]
+
+    stpes:
+      name: clone the code 
+      uses: actions/checkout@v7
+
+      name: Sonar analysis
+      uses: SonarSource/sonarqube-scan-action@v8.3.0
+      with:
+         args: >
+           -Dsonar.projectKey=Nodeapp 
+           -Dsonar.sources=. 
+           -Dsonar.host.url=http://localhost:9000 
+           -Dsonar.token=sqp_9eda214c09f01fe706b36080deab976feed75075
+  
+      
+    
